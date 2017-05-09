@@ -21,6 +21,14 @@ namespace Xamarin_Android_Barcode_Example.Scanning
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.BarcodeActivity);
+
+            if (bundle == null)
+            {
+                FragmentTransaction transaction = FragmentManager.BeginTransaction();
+                var fragment = new CameraResource.CameraPreviewFragment();
+                transaction.Replace(Resource.Id.fragmentHolder, fragment);
+                transaction.Commit();
+            }
         }
     }
 }

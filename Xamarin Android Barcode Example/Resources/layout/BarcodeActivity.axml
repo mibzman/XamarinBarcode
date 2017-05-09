@@ -5,10 +5,16 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px">
+  <FrameLayout
+  android:id="@+id/fragmentHolder"
+  android:layout_weight="2"
+  android:layout_width="0px"
+  android:layout_height="match_parent" />
   <TextView
       android:text="Barcode Activity!"
       android:textAppearance="?android:attr/textAppearanceLarge"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:id="@+id/textView1" />
+
 </LinearLayout>
